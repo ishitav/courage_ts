@@ -7,26 +7,35 @@
 }
 
 body {
-  background: linear-gradient(to bottom, #E6DFF0, #F4ECF7);
+  background: linear-gradient(to bottom, #D4C1EC, #b792e4);
   text-align: center;
   scroll-behavior: smooth;
+  color: white;
 }
 
-/* Navigation Bar */
+/* Professional Navigation Bar with Slightly Larger Logo */
 .nav {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: transparent;
-  color: white;
-  padding: 1rem 0;
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 30px;
-  font-size: 1.2rem;
+  justify-content: space-between;
+  padding: 1rem 5%; /* Slightly increased padding */
+  background: #D4C1EC;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 1000;
+}
+
+.nav-logo {
+  height: 55px; /* Increased logo size slightly */
+  cursor: pointer;
+  margin-left: 90px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
 }
 
 .nav-links button {
@@ -41,7 +50,8 @@ body {
 }
 
 .nav-links button:hover {
-  text-decoration: underline;
+  color: #FFFFFF;
+  transform: scale(1.05);
 }
 
 /* Section Layout */
@@ -54,67 +64,92 @@ body {
   padding: 2rem;
 }
 
-/* Centered About Us Title with Flashy Style */
-.about-title {
-  text-align: center;
-  margin-bottom: 50px;
-  font-size: 3.5rem;
-  font-weight: bold;
-  color: #6A0DAD;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  text-shadow: 2px 2px 10px rgba(106, 13, 173, 0.3);
-}
-
-/* About Section Formatting */
-.about-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Page Container */
+.page-container {
   width: 80%;
+  max-width: 900px;
   margin: auto;
-  gap: 50px;
+  text-align: left;
 }
 
-/* Image and Text Side by Side */
-.about-content {
+/* Page Title */
+.page-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #FAFAFF;  /* Soft white for contrast */
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 10px rgba(175, 162, 226, 0.5); /* Subtle purple glow */
+}
+
+/* Content Wrapper */
+.content-wrapper {
   display: flex;
-  flex-direction: row;
+  gap: 40px;
   align-items: center;
   justify-content: center;
-  gap: 40px;
-  width: 100%;
-  max-width: 900px;
 }
 
-/* Limit Text Width */
-.content.limited-width {
-  max-width: 400px;
-  text-align: left;
-  font-size: 1.3rem;
-  color: #333;
+/* Content */
+.content {
+  max-width: 500px;
+  font-size: 1.5rem;
+  color: white;
   line-height: 1.6;
-  background: rgba(255, 255, 255, 0.7);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Image Styling */
+/* Modern Image Styling with Backlighting */
 .rounded-image {
   width: 45%;
   max-width: 400px;
   border-radius: 20px;
   transition: 0.3s ease-in-out;
-  box-shadow: 0px 10px 25px rgba(106, 13, 173, 0.3);
+  position: relative;
+  box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.6);
 }
 
 .rounded-image:hover {
   transform: scale(1.05);
 }
 
-.glow {
-  box-shadow: 0px 10px 25px rgba(106, 13, 173, 0.3);
+/* Product Gallery */
+.product-gallery {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Preorder Form */
+.preorder-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.preorder-form input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  color: black;
+  border: none;
+}
+
+.preorder-form button {
+  padding: 12px 20px;
+  background: white;
+  color: #D8BFD8;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.preorder-form button:hover {
+  background: #E6DFF0;
 }
 
 /* Home Page Formatting */
@@ -128,7 +163,7 @@ body {
   margin: auto;
 }
 
-/* Center-align the three words */
+/* Highlight Section */
 .highlight-container {
   display: flex;
   flex-direction: column;
@@ -140,7 +175,7 @@ body {
 .highlight-text {
   font-size: 2.2rem;
   font-weight: bold;
-  color: #6A0DAD;
+  color: white;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -152,8 +187,8 @@ body {
 .shop-now-button {
   font-size: 1.3rem;
   font-weight: bold;
-  color: white;
-  background: #6A0DAD;
+  color: #D8BFD8;
+  background: white;
   padding: 12px 30px;
   border-radius: 30px;
   border: none;
@@ -163,56 +198,130 @@ body {
 }
 
 .shop-now-button:hover {
-  background: #A855F7;
+  background: #E6DFF0;
   transform: scale(1.05);
 }
 
-/* Message Section Formatting */
-.message-container {
+/* Add spacing between about sections */
+.about-spacing {
+  margin-bottom: 60px; /* Adds spacing between sections */
+}
+
+/* Ensure images are uniform */
+.uniform-image {
+  width: 40%; /* Adjust to make images similar in size */
+  max-width: 350px;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Centering the final text statement */
+.centered-text-container {
+  text-align: center;
+  margin-top: 80px; /* Adds space before the final text */
+}
+
+.about-bottom-text {
+  font-size: 2rem; /* Slightly larger text */
+  font-weight: bold;
+}
+
+/* Shop Page Styling */
+.shop-description {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #FAFAFF;
+  text-align: center;
+}
+
+.product-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 80%;
-  margin: auto;
-  gap: 20px;
+  gap: 30px;
+  margin-bottom: 50px;
 }
 
-.message-container .content {
-  max-width: 500px;
+.product-image {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-info {
   text-align: center;
+  max-width: 600px;
 }
 
-/* Preorder Form */
+.product-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.product-description {
+  font-size: 1.3rem;
+  color: white;
+  line-height: 1.6;
+}
+
+.product-price {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #E6DFF0;
+  margin-top: 10px;
+}
+
+.preorder-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.preorder-description {
+  font-size: 1.3rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .preorder-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  gap: 15px;
   margin-top: 20px;
+  align-items: center;
 }
 
-.preorder-form input {
-  padding: 10px;
-  width: 250px;
-  border: 1px solid #ccc;
+.preorder-form input,
+.preorder-form select {
+  padding: 12px;
+  width: 320px;
   border-radius: 8px;
   font-size: 1rem;
+  background: white;
+  color: black;
+  border: none;
   text-align: center;
 }
 
-.preorder-form button {
-  padding: 12px 20px;
-  background: #6A0DAD;
-  color: white;
-  border: none;
+.preorder-button {
+  padding: 14px 25px;
+  background: white;
+  color: #D8BFD8;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
 }
 
-.preorder-form button:hover {
-  background: #A855F7;
-  transform: scale(1.05);
+.preorder-button:hover {
+  background: #E6DFF0;
 }

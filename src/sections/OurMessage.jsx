@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import "../index.css";
 
 const OurMessage = () => {
   return (
@@ -8,12 +9,20 @@ const OurMessage = () => {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 1 }}
     >
-      <div className="message-container">
-        <img src="/sample.png" alt="Message Image" className="rounded-image glow" />
-        <div className="content">
-          <h2 className="title">Our Message</h2>
-          <p>Spreading love and positivity through fashion, we believe in using apparel to create meaningful connections.</p>
-          <p>Every design represents courage, unity, and self-expression, allowing you to wear your values with pride.</p>
+      <div className="page-container">
+        <h2 className="page-title">Our Message</h2>
+        <div className="content-wrapper">
+          <img src="/photo3.JPG" alt="Message Image" className="rounded-image" />
+          <div className="content">
+            <p>
+            At Courage T’s, we strive to focus on individuality. We know how difficult cancer treatment is and we want to make sure each patient has something to wear that they love. 
+            Our designs encourage independence, confidence, and expression. 
+            </p>
+    
+            <p>
+            
+            </p>
+          </div>
         </div>
       </div>
     </motion.section>
