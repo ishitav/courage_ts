@@ -15,19 +15,16 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="app-container">
       {/* Modern Navigation Bar */}
       <nav className="nav">
-        <div className="logo-container">
-          <img src="/logo.png" alt="Logo" className="logo" />
-        </div>
         <div className="nav-links">
-          <button className="nav-button" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+          <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
             Home
           </button>
-          <button className="nav-button" onClick={() => scrollToSection(aboutRef)}>About</button>
-          <button className="nav-button" onClick={() => scrollToSection(messageRef)}>Our Message</button>
-          <button className="nav-button" onClick={() => scrollToSection(shopRef)}>Shop</button>
+          <button onClick={() => scrollToSection(aboutRef)}>About</button>
+          <button onClick={() => scrollToSection(messageRef)}>Our Message</button>
+          <button onClick={() => scrollToSection(shopRef)}>Shop</button>
         </div>
       </nav>
 

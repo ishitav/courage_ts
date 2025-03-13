@@ -1,12 +1,13 @@
+/* Reset and Global Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Times New Roman', serif;
 }
 
 body {
-  background-color: white;
+  background: linear-gradient(to bottom, #E6DFF0, #F4ECF7);
   text-align: center;
   scroll-behavior: smooth;
 }
@@ -17,40 +18,35 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(to right, #6A0DAD, #A855F7);
+  background: transparent;
   color: white;
-  padding: 1rem;
+  padding: 1rem 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.logo-container img {
-  height: 50px;
+  gap: 30px;
+  font-size: 1.2rem;
+  z-index: 1000;
 }
 
 .nav-links button {
   background: none;
-  border: 2px solid white;
+  border: none;
   color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
   cursor: pointer;
-  padding: 8px 15px;
-  border-radius: 8px;
   transition: 0.3s;
-  margin: 0 10px;
-}
-
-.nav-links button:hover {
-  background: white;
-  color: #6A0DAD;
+  padding: 10px 15px;
   font-weight: bold;
 }
 
-/* Home Section */
+.nav-links button:hover {
+  text-decoration: underline;
+}
+
+/* Section Layout */
 .section {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,6 +54,70 @@ body {
   padding: 2rem;
 }
 
+/* Centered About Us Title with Flashy Style */
+.about-title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #6A0DAD;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 10px rgba(106, 13, 173, 0.3);
+}
+
+/* About Section Formatting */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  gap: 50px;
+}
+
+/* Image and Text Side by Side */
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Limit Text Width */
+.content.limited-width {
+  max-width: 400px;
+  text-align: left;
+  font-size: 1.3rem;
+  color: #333;
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Styling */
+.rounded-image {
+  width: 45%;
+  max-width: 400px;
+  border-radius: 20px;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0px 10px 25px rgba(106, 13, 173, 0.3);
+}
+
+.rounded-image:hover {
+  transform: scale(1.05);
+}
+
+.glow {
+  box-shadow: 0px 10px 25px rgba(106, 13, 173, 0.3);
+}
+
+/* Home Page Formatting */
 .home-container {
   display: flex;
   align-items: center;
@@ -68,15 +128,17 @@ body {
   margin: auto;
 }
 
+/* Center-align the three words */
 .highlight-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 15px;
+  text-align: center;
 }
 
 .highlight-text {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: bold;
   color: #6A0DAD;
   transition: transform 0.3s ease-in-out;
@@ -86,13 +148,14 @@ body {
   transform: scale(1.05);
 }
 
+/* Shop Now Button */
 .shop-now-button {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: white;
   background: #6A0DAD;
-  padding: 12px 25px;
-  border-radius: 25px;
+  padding: 12px 30px;
+  border-radius: 30px;
   border: none;
   cursor: pointer;
   transition: 0.3s ease-in-out;
@@ -104,17 +167,52 @@ body {
   transform: scale(1.05);
 }
 
-.rounded-image {
-  width: 50%;
-  max-width: 400px;
-  border-radius: 20px;
-  transition: 0.3s ease-in-out;
+/* Message Section Formatting */
+.message-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  gap: 20px;
 }
 
-.rounded-image:hover {
+.message-container .content {
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Preorder Form */
+.preorder-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.preorder-form input {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.preorder-form button {
+  padding: 12px 20px;
+  background: #6A0DAD;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+.preorder-form button:hover {
+  background: #A855F7;
   transform: scale(1.05);
-}
-
-.glow {
-  box-shadow: 0px 10px 25px rgba(106, 13, 173, 0.3);
 }
